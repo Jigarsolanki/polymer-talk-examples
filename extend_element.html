@@ -1,0 +1,35 @@
+<html>
+<head>
+  <title>Simple Extend Example</title>
+  <script src="bower_components/platform/platform.js"></script>
+  <link rel="import" href="bower_components/polymer/polymer.html">
+</head>
+<body>
+
+  <polymer-element name="my-name">
+    <template>My name is {{name}}!</template>
+    <script>
+      Polymer('my-name', {
+        publish: {
+          name: ''
+        }
+      });
+    </script>
+  </polymer-element>
+
+
+<polymer-element name="my-styled-name" extends="my-name">
+  <template>
+    My name is <strong>{{name}}</strong>!
+  </template>
+  <script>
+    Polymer('my-styled-name');
+  </script>
+</polymer-element>
+
+
+  <my-name name="Jigar"></my-name> <br>
+  <my-styled-name name="Jigar"></my-styled-name>
+
+</body>
+</html>

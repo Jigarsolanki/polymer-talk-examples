@@ -1,0 +1,64 @@
+<html>
+<head>
+  <title>Polymer Core Elements</title>
+  <script src="bower_components/platform/platform.js"></script>
+
+  <link rel="import" href="bower_components/core-input/core-input.html">
+  <link rel="import" href="bower_components/core-icon-button/core-icon-button.html">
+
+  <link rel="import" href="bower_components/core-icons/core-icons.html">
+  <link rel="import" href="bower_components/core-menu/core-submenu.html">
+  <link rel="import" href="bower_components/core-menu/core-menu.html">
+  <link rel="import" href="bower_components/core-menu-button/core-menu-button.html">
+  <link rel="import" href="bower_components/core-item/core-item.html">
+
+  <link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
+  <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+  <link rel="import" href="bower_components/core-menu/core-menu.html">
+  <link rel="import" href="bower_components/core-item/core-item.html">
+
+  <style type="text/css">
+    .content {
+      margin-left: 30px;
+    }
+  </style>
+</head>
+<body>
+  <core-scaffold>
+
+    <core-header-panel navigation flex mode="seamed">
+      <core-toolbar style="background-color: #526E9C; color: #fff;">Core Elements</core-toolbar>
+      <core-menu>
+        <core-item icon="settings" label="Core Input"><a href="#core-input" target="_self"></a></core-item>
+        <core-item icon="settings" label="Core Icon Buttons"><a href="#core-icon-button" target="_self"></a></core-item>
+        <core-item icon="settings" label="Core Menu Buttons"><a href="#core-menu-button" target="_self"></a></core-item>
+        <core-item icon="launch" label="More Elements"><a href="http://www.polymer-project.org/docs/elements/core-elements.html" target="_blank"></a></core-item>
+      </core-menu>
+    </core-header-panel>
+
+    <div tool>Examples</div>
+    <div class="content">
+      <section id="core-input">
+        <h2>Core Input</h2>
+        <core-input placeholder="Enter some text here"></core-input>
+      </section>
+      <section id="core-icon-button">
+        <h2>Core Icon Buttons</h2>
+        <core-icon-button icon="menu"></core-icon-button>
+        <core-icon-button icon="cloud"></core-icon-button>
+        <core-icon-button src="http://casopisinterfon.org/wp-content/uploads/2013/11/rackspace_logo-25.jpg"></core-icon-button>
+      </section>
+      <section id="core-menu-button">
+        <h2>Core Menu Buttons</h2>
+        <core-menu-button icon="settings" selected="0">
+          <core-item icon="favorite" label="Going"></core-item>
+          <core-item icon="block" label="Not Going"></core-item>
+          <core-item icon="favorite-outline" label="Not Sure"></core-item>
+        </core-menu-button>
+      </section>
+    </div>
+
+  </core-scaffold>
+
+</body>
+</html>

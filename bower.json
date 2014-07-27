@@ -1,0 +1,18 @@
+{
+  "name": "polymertalk",
+  "version": "0.0.0",
+  "authors": [
+    "Jigar Solanki <jigar234@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "core-input": "Polymer/core-input#~0.3.4"
+  }
+}

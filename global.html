@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title>My Global Example</title>
+  <script src="bower_components/platform/platform.js"></script>
+  <link rel="import" href="bower_components/polymer/polymer.html">
+</head>
+<body>
+<!-- ***************** Play zone ****************** -->
+<polymer-element name="app-globals">
+  <script>
+  (function() {
+    var values = {};
+
+    Polymer('app-globals', {
+       ready: function() {
+         for (var i = 0; i < this.attributes.length; ++i) {
+           var attr = this.attributes[i];
+
+           values[attr.nodeName] = attr.value;
+         }
+
+         this.values = values;
+       }
+    });
+  })();
+  </script>
+</polymer-element>
+
+<polymer-element name="my-component">
+  <template>
+    <app-globals id="globals"></app-globals>
+    <div>{{globals.first_name}} {{globals.last_name}}</div>
+  </template>
+  <script>
+    Polymer('my-component', {
+      ready: function() { debugger; this.globals = this.$.globals.values; }
+     });
+  </script>
+</polymer-element>
+
+<app-globals first_name="Addy" last_name="Osmani"></app-globals>
+<my-component></my-component>
+<my-component></my-component>
+
+<!-- ************************************************ -->
+</body>
+</html>

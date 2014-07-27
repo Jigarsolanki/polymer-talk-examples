@@ -1,0 +1,44 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title>My Simple Example</title>
+  <script src="bower_components/platform/platform.js"></script>
+  <link rel="import" href="bower_components/polymer/polymer.html">
+
+  <link rel="import" href="bower_components/core-localstorage/core-localstorage.html">
+</head>
+<body>
+<!-- ***************** Play zone ****************** -->
+  <local-input id="my-local-input"><local-input>
+
+  <polymer-element name="local-input" constructor="LocalInput">
+    <template>
+      Name: <input type="text" value="{{value}}">
+      <core-localstorage name="my-name" value="{{value}}"></core-localstorage>
+    </template>
+    <script>
+      Polymer('local-input', {
+        created: function () {
+          this.value = '';
+        },
+        valueChanged: function (oldValue, newValue) {
+          debugger;
+          this.fire('yo-man-value-changed');
+        }
+      });
+    </script>
+  </polymer-element>
+
+
+  <script type="text/javascript">
+    var myLocalInput;
+
+    myLocalInput = document.getElementById('my-local-input');
+
+    myLocalInput.addEventListener('yo-man-value-changed', function (e) {
+      console.log(e);
+    });
+  </script>
+<!-- ************************************************ -->
+</body>
+</html>

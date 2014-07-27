@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title>My Simple Example</title>
+  <script src="bower_components/platform/platform.js"></script>
+  <link rel="import" href="bower_components/polymer/polymer.html">
+</head>
+<body>
+<!-- ***************** Play zone ****************** -->
+  <polymer-element name="name-tag" constructor="NameTag" attributes="name" noscript>
+    <template>
+      My name is <input value="{{name}}">!
+    </template>
+    <script>
+      Polymer('name-tag', {
+        name: "Anonymous",
+        nameChanged: function (e) {
+          this.fire('name-changed');
+        }
+      });
+    </script>
+  </polymer-element>
+
+
+
+<name-tag id="my-name-tag"></name-tag>
+
+<script type="text/javascript">
+  var myNameTag;
+
+  myNameTag = document.getElementById('my-name-tag');
+  myNameTag.addEventListener('name-changed', function (e) {
+    console.log('name-changed', e);
+  });
+</script>
+<!-- ************************************************ -->
+</body>
+</html>

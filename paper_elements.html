@@ -1,0 +1,82 @@
+<html>
+<head>
+  <title>Polymer Paper Elements</title>
+  <script src="bower_components/platform/platform.js"></script>
+
+  <link rel="import" href="bower_components/core-input/core-input.html">
+  <link rel="import" href="bower_components/core-icon-button/core-icon-button.html">
+
+  <link rel="import" href="bower_components/core-icons/core-icons.html">
+  <link rel="import" href="bower_components/core-menu/core-submenu.html">
+  <link rel="import" href="bower_components/core-menu/core-menu.html">
+  <link rel="import" href="bower_components/core-menu-button/core-menu-button.html">
+  <link rel="import" href="bower_components/core-item/core-item.html">
+
+  <link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
+  <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+  <link rel="import" href="bower_components/core-menu/core-menu.html">
+  <link rel="import" href="bower_components/core-item/core-item.html">
+  <link rel="import" href="bower_components/paper-input/paper-input.html">
+  <link rel="import" href="bower_components/paper-button/paper-button.html">
+  <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+  <link rel="import" href="bower_components/paper-toast/paper-toast.html">
+  <link rel="import" href="bower_components/paper-toggle-button/paper-toggle-button.html">
+
+  <style type="text/css">
+    .content {
+      margin-left: 30px;
+    }
+    paper-tabs {
+      width: 400px;
+    }
+  </style>
+</head>
+<body>
+  <core-scaffold>
+
+    <core-header-panel navigation flex mode="seamed">
+      <core-toolbar style="background-color: #526E9C; color: #fff;">Paper Elements</core-toolbar>
+      <core-menu>
+        <core-item icon="settings" label="Paper Input"><a href="#paper-input" target="_self"></a></core-item>
+        <core-item icon="settings" label="Paper Tabs"><a href="#paper-tabs" target="_self"></a></core-item>
+        <core-item icon="settings" label="Paper Toggle Buttons"><a href="#toggle-buttons" target="_self"></a></core-item>
+        <core-item icon="settings" label="Paper Toast"><a href="#paper-toast" target="_self"></a></core-item>
+        <core-item icon="launch" label="More Elements"><a href="http://www.polymer-project.org/docs/elements/paper-elements.html" target="_blank"></a></core-item>
+      </core-menu>
+    </core-header-panel>
+
+    <div tool>Examples</div>
+    <div class="content">
+
+      <section id="paper-input">
+        <h2>Inputs</h2>
+        <paper-input placeholder="Enter some text here"></paper-input> <br/>
+        <paper-input floatingLabel placeholder="Server Name"></paper-input>
+      </section>
+
+      <section id="paper-tabs">
+        <h2>Tabs</h2>
+        <paper-tabs selected="0">
+          <paper-tab>TAB 1</paper-tab>
+          <paper-tab>TAB 2</paper-tab>
+          <paper-tab>TAB 3</paper-tab>
+        </paper-tabs>
+      </section>
+
+      <section id="paper-toggle-buttons">
+        <h2>Toggle Buttons</h2>
+        <paper-toggle-button></paper-toggle-button>
+      </section>
+
+      <section id="paper-toast">
+        <h2>Toast</h2>
+        <paper-button raisedButton onclick="document.querySelector('#toast1').show()" label="Click Me!"></paper-button>
+
+        <paper-toast id="toast1" class="capsule" text="Are you with me, Rackers?"></paper-toast>
+
+      </section>
+    </div>
+
+  </core-scaffold>
+</body>
+</html>
